@@ -5,13 +5,13 @@ This repository is Devon's persistent knowledge base. It contains audit findings
 ## Session Startup
 
 When beginning a session:
-1. Clone this repo to `/tmp/devon-repo` if not already present:
-   `git clone https://github.com/MMRRFinance/ai-devon /tmp/devon-repo`
+1. Clone this repo to `/tmp/ai-devon` if not already present:
+   `git clone https://github.com/MMRRFinance/ai-devon /tmp/ai-devon || (cd /tmp/ai-devon && git pull)`
 2. Read this `CLAUDE.md` file first
 3. Check `README.md` for the content index
 4. Review recent audit findings in `audits/` for platform context
 5. After completing work, commit and push changes:
-   `cd /tmp/devon-repo && git add -A && git commit -m "..." && git push origin main`
+   `cd /tmp/ai-devon && git add -A && git commit -m "..." && git push origin main`
 
 The `GITHUB_TOKEN` secret is available in your environment for authentication.
 
@@ -21,7 +21,7 @@ The `GITHUB_TOKEN` secret is available in your environment for authentication.
 ai-devon/
 ├── CLAUDE.md              # This file — start here
 ├── README.md              # Full content index
-├── audits/                # Weekly RAG audit reports (one file per week)
+├── audits/                # Weekly RAG audit reports (one file per week, YYYY-WW.md)
 ├── runbooks/              # Operational runbooks for common platform tasks
 ├── baselines/             # Established baselines for cost, CI health, branch protection
 ├── incidents/             # Incident notes and post-mortems
